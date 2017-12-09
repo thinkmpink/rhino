@@ -15,8 +15,11 @@ cabal-version:       >=1.10
 
 library
   hs-source-dirs:      src
-  exposed-modules:     Lib
+  exposed-modules:     Lib, Stream
   build-depends:       base >= 4.7 && < 5
+                     , bytestring
+                     , word8
+                     , base64-bytestring
   default-language:    Haskell2010
 
 executable rhino-exe
@@ -25,8 +28,6 @@ executable rhino-exe
   ghc-options:         -threaded -rtsopts -with-rtsopts=-N
   build-depends:       base
                      , rhino
-                     , bytestring
-                     , word8
   default-language:    Haskell2010
 
 test-suite rhino-test
@@ -35,6 +36,7 @@ test-suite rhino-test
   main-is:             Spec.hs
   build-depends:       base
                      , rhino
+                     , bytestring
   ghc-options:         -threaded -rtsopts -with-rtsopts=-N
   default-language:    Haskell2010
 

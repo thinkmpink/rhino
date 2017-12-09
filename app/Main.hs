@@ -1,7 +1,6 @@
 module Main where
 
-import Lib
-import Stream
+-- import Lib
 
 main :: IO ()
-main = someFunc
+main = putStrLn "main() not implemented"
