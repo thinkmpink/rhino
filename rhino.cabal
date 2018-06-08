@@ -33,6 +33,7 @@ executable rhino-exe
 test-suite rhino-test
   type:                exitcode-stdio-1.0
   hs-source-dirs:      test
+  --test-module:         TestS1C1
   main-is:             Spec.hs
   build-depends:       base
                      , rhino
